@@ -9,6 +9,8 @@
 		<string>James Tiberius Kirk</string>
 		<key>From</key>
 		<string>Star Trek</string>
+		<key>Description</key>
+		<string>The USS Enterprise (NCC-1701) is a fictional starship in the Star Trek media franchise. The original Star Trek series depicts her crew&apos;s mission &quot;to explore strange new worlds; to seek out new life and new civilizations; to boldly go where no man has gone before&quot; under the command of Captain James T. Kirk. The ship&apos;s basic design &quot;formed the basis for one of sci-fi&apos;s most iconic images&quot;.[2] A refit version of the ship appears in the first three Star Trek films. The 2009 Star Trek film, which takes place in an &quot;alternate, parallel&quot; timeline,[3] includes an oversized and redesigned version of the Enterprise.</string>
 	</dict>
 </array>
 </plist>

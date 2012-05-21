@@ -11,7 +11,8 @@
 @interface StarshipsDetailViewController : UIViewController
 
 @property (strong, nonatomic) id detailItem;
+@property (weak, nonatomic) IBOutlet UITextView *detailDescription;
 
-@property (strong, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
+
 
 @end
