@@ -16,6 +16,7 @@
 		CE5FD618156AB48200E7F98A /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE5FD616156AB48200E7F98A /* MainStoryboard.storyboard */; };
 		CE5FD61B156AB48200E7F98A /* StarshipsMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5FD61A156AB48200E7F98A /* StarshipsMasterViewController.m */; };
 		CE5FD61E156AB48200E7F98A /* StarshipsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5FD61D156AB48200E7F98A /* StarshipsDetailViewController.m */; };
+		CE5FD62E156AC48700E7F98A /* StarshipData.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE5FD62D156AC48700E7F98A /* StarshipData.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,17 +24,18 @@
 		CE5FD604156AB48200E7F98A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		CE5FD606156AB48200E7F98A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CE5FD608156AB48200E7F98A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		CE5FD60C156AB48200E7F98A /* Starship Guide-Info.plist */ = {isa = PBXFileReference; path = "Starship Guide-Info.plist"; sourceTree = "<group>"; };
+		CE5FD60C156AB48200E7F98A /* Starship Guide-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Starship Guide-Info.plist"; sourceTree = "<group>"; };
 		CE5FD60E156AB48200E7F98A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CE5FD610156AB48200E7F98A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		CE5FD612156AB48200E7F98A /* Starship Guide-Prefix.pch */ = {isa = PBXFileReference; path = "Starship Guide-Prefix.pch"; sourceTree = "<group>"; };
-		CE5FD613156AB48200E7F98A /* StarshipsAppDelegate.h */ = {isa = PBXFileReference; path = StarshipsAppDelegate.h; sourceTree = "<group>"; };
+		CE5FD612156AB48200E7F98A /* Starship Guide-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Starship Guide-Prefix.pch"; sourceTree = "<group>"; };
+		CE5FD613156AB48200E7F98A /* StarshipsAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StarshipsAppDelegate.h; sourceTree = "<group>"; };
 		CE5FD614156AB48200E7F98A /* StarshipsAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StarshipsAppDelegate.m; sourceTree = "<group>"; };
 		CE5FD617156AB48200E7F98A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		CE5FD619156AB48200E7F98A /* StarshipsMasterViewController.h */ = {isa = PBXFileReference; path = StarshipsMasterViewController.h; sourceTree = "<group>"; };
+		CE5FD619156AB48200E7F98A /* StarshipsMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StarshipsMasterViewController.h; sourceTree = "<group>"; };
 		CE5FD61A156AB48200E7F98A /* StarshipsMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StarshipsMasterViewController.m; sourceTree = "<group>"; };
-		CE5FD61C156AB48200E7F98A /* StarshipsDetailViewController.h */ = {isa = PBXFileReference; path = StarshipsDetailViewController.h; sourceTree = "<group>"; };
+		CE5FD61C156AB48200E7F98A /* StarshipsDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StarshipsDetailViewController.h; sourceTree = "<group>"; };
 		CE5FD61D156AB48200E7F98A /* StarshipsDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StarshipsDetailViewController.m; sourceTree = "<group>"; };
+		CE5FD62D156AC48700E7F98A /* StarshipData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = StarshipData.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 				CE5FD60C156AB48200E7F98A /* Starship Guide-Info.plist */,
 				CE5FD60D156AB48200E7F98A /* InfoPlist.strings */,
 				CE5FD610156AB48200E7F98A /* main.m */,
+				CE5FD62D156AC48700E7F98A /* StarshipData.plist */,
 				CE5FD612156AB48200E7F98A /* Starship Guide-Prefix.pch */,
 			);
 			name = "Supporting Files";
@@ -156,6 +159,7 @@
 			files = (
 				CE5FD60F156AB48200E7F98A /* InfoPlist.strings in Resources */,
 				CE5FD618156AB48200E7F98A /* MainStoryboard.storyboard in Resources */,
+				CE5FD62E156AC48700E7F98A /* StarshipData.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

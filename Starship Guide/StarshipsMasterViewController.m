@@ -10,6 +10,7 @@
 
 #import "StarshipsDetailViewController.h"
 
+
 @interface StarshipsMasterViewController () {
     NSMutableArray *_objects;
 }
@@ -17,9 +18,21 @@
 
 @implementation StarshipsMasterViewController
 
+@synthesize thePath;
+@synthesize rawPlistArray;
 
 - (void)awakeFromNib
 {
+    //This Gets the Plist Array at the start of the code
+    thePath = [[NSBundle mainBundle]  pathForResource:@"StarshipData" ofType:@"plist"];
+    rawPlistArray = [[NSArray alloc] initWithContentsOfFile:thePath];
+    _objects = [NSMutableArray arrayWithArray:rawPlistArray];
+
+    
+    NSLog(@"thePath:%@",thePath);
+    NSLog(@"Plist:%@",rawPlistArray);
+    NSLog(@"Objects:%@",_objects);
+ 
     [super awakeFromNib];
 }
 
@@ -46,9 +59,9 @@
 
 - (void)insertNewObject:(id)sender
 {
-    if (!_objects) {
-        _objects = [[NSMutableArray alloc] init];
-    }
+   // if (!_objects) {
+     //   _objects = [[NSMutableArray alloc] init];
+   // }
     [_objects insertObject:[NSDate date] atIndex:0];
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
     [self.tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
@@ -70,8 +83,8 @@
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
 
-    NSDate *object = [_objects objectAtIndex:indexPath.row];
-    cell.textLabel.text = [object description];
+    NSDictionary *object = [_objects objectAtIndex:indexPath.row];
+    cell.textLabel.text = [object objectForKey:@"Name"];
     return cell;
 }
 
