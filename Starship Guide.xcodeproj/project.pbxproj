@@ -17,6 +17,7 @@
 		CE5FD61B156AB48200E7F98A /* StarshipsMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5FD61A156AB48200E7F98A /* StarshipsMasterViewController.m */; };
 		CE5FD61E156AB48200E7F98A /* StarshipsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5FD61D156AB48200E7F98A /* StarshipsDetailViewController.m */; };
 		CE5FD62E156AC48700E7F98A /* StarshipData.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE5FD62D156AC48700E7F98A /* StarshipData.plist */; };
+		CEC79376156B7F4E009C0F0E /* AddingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC79375156B7F4E009C0F0E /* AddingViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,8 @@
 		CE5FD61C156AB48200E7F98A /* StarshipsDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StarshipsDetailViewController.h; sourceTree = "<group>"; };
 		CE5FD61D156AB48200E7F98A /* StarshipsDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StarshipsDetailViewController.m; sourceTree = "<group>"; };
 		CE5FD62D156AC48700E7F98A /* StarshipData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = StarshipData.plist; sourceTree = "<group>"; };
+		CEC79374156B7F4E009C0F0E /* AddingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddingViewController.h; path = ../AddingViewController.h; sourceTree = "<group>"; };
+		CEC79375156B7F4E009C0F0E /* AddingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddingViewController.m; path = ../AddingViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +85,8 @@
 		CE5FD60A156AB48200E7F98A /* Starship Guide */ = {
 			isa = PBXGroup;
 			children = (
+				CEC79374156B7F4E009C0F0E /* AddingViewController.h */,
+				CEC79375156B7F4E009C0F0E /* AddingViewController.m */,
 				CE5FD613156AB48200E7F98A /* StarshipsAppDelegate.h */,
 				CE5FD614156AB48200E7F98A /* StarshipsAppDelegate.m */,
 				CE5FD616156AB48200E7F98A /* MainStoryboard.storyboard */,
@@ -174,6 +179,7 @@
 				CE5FD615156AB48200E7F98A /* StarshipsAppDelegate.m in Sources */,
 				CE5FD61B156AB48200E7F98A /* StarshipsMasterViewController.m in Sources */,
 				CE5FD61E156AB48200E7F98A /* StarshipsDetailViewController.m in Sources */,
+				CEC79376156B7F4E009C0F0E /* AddingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +291,7 @@
 				CE5FD623156AB48200E7F98A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

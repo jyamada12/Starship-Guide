@@ -12,4 +12,5 @@
 
 @property NSString *thePath;
 @property NSArray *rawPlistArray; 
+- (IBAction)add:(id)sender;
 @end
