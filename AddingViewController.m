@@ -14,7 +14,6 @@
 
 @implementation AddingViewController
 @synthesize nameInput;
-@synthesize donePressed;
 @synthesize _objects;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,6 +26,7 @@
 
 - (void)viewDidLoad
 {
+    NSLog(@"view Did Load");
     //This Gets the Plist Array at the start of the code
     NSString *thePath = [[NSBundle mainBundle]  pathForResource:@"StarshipData" ofType:@"plist"];
     _objects = [[NSMutableArray alloc]initWithContentsOfFile:thePath];
@@ -38,7 +38,6 @@
 - (void)viewDidUnload
 {
     [self setNameInput:nil];
-    [self setDonePressed:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
@@ -48,8 +47,17 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
-- (IBAction)Done:(id)sender {
-     NSString *thePath = [[NSBundle mainBundle]  pathForResource:@"StarshipData" ofType:@"plist"];
+//Makes Keyboard go Back
+- (BOOL)textFieldShouldReturn:(UITextField *)theTextField {
+    if (theTextField == self.nameInput) {
+        [theTextField resignFirstResponder];
+    }
+    return YES;
+    NSLog(@"%@",self.nameInput.text);
+}
+
+    /*
+    NSString *thePath = [[NSBundle mainBundle]  pathForResource:@"StarshipData" ofType:@"plist"];
     if (!_objects) {
         _objects = [[NSMutableArray alloc] init];
     }
@@ -58,14 +66,8 @@
     NSDictionary *newShip = [[NSDictionary alloc]initWithObjects:tempObjects forKeys:tempKeys];
     [_objects insertObject:newShip atIndex:0];
     
+    NSLog(@"%@",_objects);
+    
     [_objects writeToFile:thePath atomically:YES];
-}
-
-- (BOOL)textFieldShouldReturn:(UITextField *)theTextField {
-    if (theTextField == self.nameInput) {
-        [theTextField resignFirstResponder];
-    }
-    return YES;
-}
-
+*/
 @end

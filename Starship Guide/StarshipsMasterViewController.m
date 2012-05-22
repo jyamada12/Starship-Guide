@@ -29,9 +29,9 @@
     _objects = [NSMutableArray arrayWithArray:rawPlistArray];
 
     
-    NSLog(@"thePath:%@",thePath);
-    NSLog(@"Plist:%@",rawPlistArray);
-    NSLog(@"Objects:%@",_objects);
+   // NSLog(@"thePath:%@",thePath);
+   // NSLog(@"Plist:%@",rawPlistArray);
+   // NSLog(@"Objects:%@",_objects);
  
     [super awakeFromNib];
 }
@@ -54,7 +54,7 @@
 {
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
-
+/*
 - (void)insertNewObject:(id)sender
 {
     if (!_objects) {
@@ -67,7 +67,7 @@
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
     [self.tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
-
+*/
 #pragma mark - Table View
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -130,11 +130,10 @@
     }
     
     if ([[segue identifier] isEqualToString:@"adding"]) {
+        NSLog(@"Going into adding controller");
         
     }
 
 }
 
-- (IBAction)add:(id)sender {
-}
 @end
