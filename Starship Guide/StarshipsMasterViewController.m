@@ -59,10 +59,13 @@
 
 - (void)insertNewObject:(id)sender
 {
-   // if (!_objects) {
-     //   _objects = [[NSMutableArray alloc] init];
-   // }
-    [_objects insertObject:[NSDate date] atIndex:0];
+    if (!_objects) {
+        _objects = [[NSMutableArray alloc] init];
+    }
+    NSArray *tempKeys = [[NSArray alloc]initWithObjects:@"Name",@"Captian", @"From", @"Description", nil];
+    NSArray *tempObjects = [[NSArray alloc]initWithObjects:@"EditMe",@"EditMe", @"EditMe", @"EditMe", nil];
+    NSDictionary *newShip = [[NSDictionary alloc]initWithObjects:tempObjects forKeys:tempKeys];
+    [_objects insertObject:newShip atIndex:0];
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
     [self.tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
