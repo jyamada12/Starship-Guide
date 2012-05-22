@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AddingViewController : UIViewController
+@interface AddingViewController : UIViewController <UITextFieldDelegate>
+@property (weak, nonatomic) IBOutlet UITextField *nameInput;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *donePressed;
+@property NSMutableArray *_objects;
+
 
 @end
