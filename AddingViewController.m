@@ -7,6 +7,7 @@
 //
 
 #import "AddingViewController.h"
+#import "StarshipsMasterViewController.h"
 
 @interface AddingViewController ()
 
@@ -14,7 +15,11 @@
 
 @implementation AddingViewController
 @synthesize nameInput;
+@synthesize captianInput;
+@synthesize fromInput;
+@synthesize descriptionInput;
 @synthesize _objects;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -26,7 +31,8 @@
 
 - (void)viewDidLoad
 {
-    NSLog(@"view Did Load");
+    NSLog(@"Adding viewDidLoad");
+    
     //This Gets the Plist Array at the start of the code
     NSString *thePath = [[NSBundle mainBundle]  pathForResource:@"StarshipData" ofType:@"plist"];
     _objects = [[NSMutableArray alloc]initWithContentsOfFile:thePath];
@@ -38,6 +44,9 @@
 - (void)viewDidUnload
 {
     [self setNameInput:nil];
+    [self setCaptianInput:nil];
+    [self setFromInput:nil];
+    [self setDescriptionInput:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
@@ -52,22 +61,32 @@
     if (theTextField == self.nameInput) {
         [theTextField resignFirstResponder];
     }
+    if (theTextField == self.captianInput) {
+        [theTextField resignFirstResponder];
+    }
+    if (theTextField == self.fromInput) {
+        [theTextField resignFirstResponder];
+    }
+    if (theTextField == self.descriptionInput) {
+        [theTextField resignFirstResponder];
+    }
     return YES;
     NSLog(@"%@",self.nameInput.text);
 }
 
-    /*
-    NSString *thePath = [[NSBundle mainBundle]  pathForResource:@"StarshipData" ofType:@"plist"];
-    if (!_objects) {
-        _objects = [[NSMutableArray alloc] init];
+//Saves to plist before going back to the Master View
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([[segue identifier] isEqualToString:@"doneAdding"]){
+        NSString *thePath = [[NSBundle mainBundle]  pathForResource:@"StarshipData" ofType:@"plist"];
+        NSArray *tempKeys = [[NSArray alloc]initWithObjects:@"Name",@"Captian", @"From", @"Description", nil];
+        NSArray *tempObjects = [[NSArray alloc]initWithObjects:nameInput.text,captianInput.text, fromInput.text,descriptionInput.text, nil];
+        NSDictionary *newShip = [[NSDictionary alloc]initWithObjects:tempObjects forKeys:tempKeys];
+        [_objects insertObject:newShip atIndex:0];
+        
+        //NSLog(@"%@",_objects);
+        
+        [_objects writeToFile:thePath atomically:YES];
     }
-    NSArray *tempKeys = [[NSArray alloc]initWithObjects:@"Name",@"Captian", @"From", @"Description", nil];
-    NSArray *tempObjects = [[NSArray alloc]initWithObjects:nameInput.text,@"EditMe", @"EditMe", @"EditMe", nil];
-    NSDictionary *newShip = [[NSDictionary alloc]initWithObjects:tempObjects forKeys:tempKeys];
-    [_objects insertObject:newShip atIndex:0];
-    
-    NSLog(@"%@",_objects);
-    
-    [_objects writeToFile:thePath atomically:YES];
-*/
+}
+
 @end
