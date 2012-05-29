@@ -18,6 +18,11 @@
 		CE5FD61E156AB48200E7F98A /* StarshipsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5FD61D156AB48200E7F98A /* StarshipsDetailViewController.m */; };
 		CE5FD62E156AC48700E7F98A /* StarshipData.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE5FD62D156AC48700E7F98A /* StarshipData.plist */; };
 		CEC79376156B7F4E009C0F0E /* AddingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC79375156B7F4E009C0F0E /* AddingViewController.m */; };
+		CECE71D31572E58F00BE3500 /* Enterprise.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CECE71CF1572E58F00BE3500 /* Enterprise.jpg */; };
+		CECE71D41572E58F00BE3500 /* Millennium Falcon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CECE71D01572E58F00BE3500 /* Millennium Falcon.jpg */; };
+		CECE71D51572E58F00BE3500 /* Pillar of Autumn.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CECE71D11572E58F00BE3500 /* Pillar of Autumn.jpg */; };
+		CECE71D61572E58F00BE3500 /* SSV Normandy SR-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CECE71D21572E58F00BE3500 /* SSV Normandy SR-1.jpg */; };
+		CEFC18081574D347008A6023 /* default.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CEFC18071574D347008A6023 /* default.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +44,11 @@
 		CE5FD62D156AC48700E7F98A /* StarshipData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = StarshipData.plist; sourceTree = "<group>"; };
 		CEC79374156B7F4E009C0F0E /* AddingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddingViewController.h; path = ../AddingViewController.h; sourceTree = "<group>"; };
 		CEC79375156B7F4E009C0F0E /* AddingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddingViewController.m; path = ../AddingViewController.m; sourceTree = "<group>"; };
+		CECE71CF1572E58F00BE3500 /* Enterprise.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Enterprise.jpg; sourceTree = "<group>"; };
+		CECE71D01572E58F00BE3500 /* Millennium Falcon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Millennium Falcon.jpg"; sourceTree = "<group>"; };
+		CECE71D11572E58F00BE3500 /* Pillar of Autumn.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Pillar of Autumn.jpg"; sourceTree = "<group>"; };
+		CECE71D21572E58F00BE3500 /* SSV Normandy SR-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "SSV Normandy SR-1.jpg"; sourceTree = "<group>"; };
+		CEFC18071574D347008A6023 /* default.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = default.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +112,11 @@
 		CE5FD60B156AB48200E7F98A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CEFC18071574D347008A6023 /* default.jpg */,
+				CECE71CF1572E58F00BE3500 /* Enterprise.jpg */,
+				CECE71D01572E58F00BE3500 /* Millennium Falcon.jpg */,
+				CECE71D11572E58F00BE3500 /* Pillar of Autumn.jpg */,
+				CECE71D21572E58F00BE3500 /* SSV Normandy SR-1.jpg */,
 				CE5FD60C156AB48200E7F98A /* Starship Guide-Info.plist */,
 				CE5FD60D156AB48200E7F98A /* InfoPlist.strings */,
 				CE5FD610156AB48200E7F98A /* main.m */,
@@ -165,6 +180,11 @@
 				CE5FD60F156AB48200E7F98A /* InfoPlist.strings in Resources */,
 				CE5FD618156AB48200E7F98A /* MainStoryboard.storyboard in Resources */,
 				CE5FD62E156AC48700E7F98A /* StarshipData.plist in Resources */,
+				CECE71D31572E58F00BE3500 /* Enterprise.jpg in Resources */,
+				CECE71D41572E58F00BE3500 /* Millennium Falcon.jpg in Resources */,
+				CECE71D51572E58F00BE3500 /* Pillar of Autumn.jpg in Resources */,
+				CECE71D61572E58F00BE3500 /* SSV Normandy SR-1.jpg in Resources */,
+				CEFC18081574D347008A6023 /* default.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

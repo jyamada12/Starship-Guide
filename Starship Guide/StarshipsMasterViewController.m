@@ -6,10 +6,8 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "StarshipsMasterViewController.h"
-
 #import "StarshipsDetailViewController.h"
-
+#import "StarshipsMasterViewController.h"
 
 @interface StarshipsMasterViewController () {
     NSMutableArray *_objects;
@@ -19,33 +17,39 @@
 @implementation StarshipsMasterViewController
 
 @synthesize thePath;
-@synthesize rawPlistArray;
+
 
 - (void)awakeFromNib
 {
+    NSLog(@"Master awakeFromNib");
+    
     //This Gets the Plist Array at the start of the code
     thePath = [[NSBundle mainBundle]  pathForResource:@"StarshipData" ofType:@"plist"];
-    rawPlistArray = [[NSArray alloc] initWithContentsOfFile:thePath];
-    _objects = [NSMutableArray arrayWithArray:rawPlistArray];
-
+    _objects = [[NSMutableArray alloc] initWithContentsOfFile:thePath];
     
-   // NSLog(@"thePath:%@",thePath);
-   // NSLog(@"Plist:%@",rawPlistArray);
-   // NSLog(@"Objects:%@",_objects);
- 
     [super awakeFromNib];
 }
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+     NSLog(@"Master viewDidLoad");
+    
+    //Make Sure that whenever the view loads _objects is updated
+    _objects = [[NSMutableArray alloc] initWithContentsOfFile:thePath];
+    
+    //Adding the Edit Button
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
+   
+    //Refresh All Objects
+    [self.tableView reloadData];
+    
+    [super viewDidLoad];
 
 }
 
 - (void)viewDidUnload
 {
+     NSLog(@"Master viewDidUnload");
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
@@ -82,8 +86,8 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    //Make a cell and set the title label to the "Name" in each of the ships dictionaries
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
-
     NSDictionary *object = [_objects objectAtIndex:indexPath.row];
     cell.textLabel.text = [object objectForKey:@"Name"];
     return cell;
@@ -97,12 +101,15 @@
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    //Set Up Editting
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         [_objects removeObjectAtIndex:indexPath.row];
         [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        [_objects writeToFile:thePath atomically:YES];
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
     }
+    [self.tableView reloadData];
 }
 
 /*
@@ -123,17 +130,20 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+    //Things to do befor going to the Detail View
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        NSDate *object = [_objects objectAtIndex:indexPath.row];
+     NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        NSObject *object = [_objects objectAtIndex:indexPath.row];
         [[segue destinationViewController] setDetailItem:object];
     }
     
+     //Things to do befor going to the Adding View
     if ([[segue identifier] isEqualToString:@"adding"]) {
         NSLog(@"Going into adding controller");
         
     }
 
 }
+
 
 @end

@@ -27,7 +27,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="17" sceneMemberID="firstResponder"/>
                 <tableViewController storyboardIdentifier="" title="Master" id="12" customClass="StarshipsMasterViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="13">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -77,7 +77,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZSh-Ob-wt7" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="Rjs-YO-06a" customClass="AddingViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xb1-KK-vOX">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Name:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="dGH-fz-Qkb">
@@ -155,7 +155,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="captianInput" destination="UGA-xI-htN" id="giT-oI-MbS"/>
+                        <outlet property="captainInput" destination="UGA-xI-htN" id="owa-DD-qyZ"/>
                         <outlet property="descriptionInput" destination="Nll-Ap-b6t" id="KPo-xL-0Yt"/>
                         <outlet property="fromInput" destination="ziX-yg-JZF" id="x79-L2-Cvg"/>
                         <outlet property="nameInput" destination="P7L-Ab-8q4" id="d1m-jb-mCe"/>
@@ -170,7 +170,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="23" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="" title="Detail" id="21" customClass="StarshipsDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="22">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Description:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="0YR-3C-Bnh">
@@ -194,14 +194,14 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Captian:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="IIS-bU-cqz">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Captain:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="IIS-bU-cqz">
                                 <rect key="frame" x="20" y="225" width="64" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Captian" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="MGU-Wu-dA3">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Captain" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="MGU-Wu-dA3">
                                 <rect key="frame" x="88" y="225" width="217" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -229,15 +229,20 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="ESh-bq-bds">
+                                <rect key="frame" x="40" y="46" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Information" id="26"/>
                     <connections>
-                        <outlet property="captianLabel" destination="MGU-Wu-dA3" id="64O-lt-Q77"/>
+                        <outlet property="captainLabel" destination="MGU-Wu-dA3" id="53W-qd-X2X"/>
                         <outlet property="detailDescription" destination="IM5-38-37d" id="YmG-zW-wVV"/>
                         <outlet property="fromLabel" destination="FA4-kB-SMC" id="M9t-bb-p9q"/>
                         <outlet property="nameLabel" destination="Gqj-no-54i" id="oT1-IT-lr8"/>
+                        <outlet property="shipImage" destination="ESh-bq-bds" id="ydO-uB-QjZ"/>
                     </connections>
                 </viewController>
             </objects>
@@ -249,6 +254,8 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/AddingViewController.h"/>
             <relationships>
                 <relationship kind="outlet" name="captianInput" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="descriptionInput" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="fromInput" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="nameInput" candidateClass="UITextField"/>
             </relationships>
         </class>
@@ -259,6 +266,7 @@
                 <relationship kind="outlet" name="detailDescription" candidateClass="UITextView"/>
                 <relationship kind="outlet" name="fromLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="nameLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="shipImage" candidateClass="UIImageView"/>
             </relationships>
         </class>
         <class className="StarshipsMasterViewController" superclassName="UITableViewController">

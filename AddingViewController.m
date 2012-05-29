@@ -15,7 +15,7 @@
 
 @implementation AddingViewController
 @synthesize nameInput;
-@synthesize captianInput;
+@synthesize captainInput;
 @synthesize fromInput;
 @synthesize descriptionInput;
 @synthesize _objects;
@@ -44,7 +44,7 @@
 - (void)viewDidUnload
 {
     [self setNameInput:nil];
-    [self setCaptianInput:nil];
+    [self setCaptainInput:nil];
     [self setFromInput:nil];
     [self setDescriptionInput:nil];
     [super viewDidUnload];
@@ -61,7 +61,7 @@
     if (theTextField == self.nameInput) {
         [theTextField resignFirstResponder];
     }
-    if (theTextField == self.captianInput) {
+    if (theTextField == self.captainInput) {
         [theTextField resignFirstResponder];
     }
     if (theTextField == self.fromInput) {
@@ -79,7 +79,7 @@
     if ([[segue identifier] isEqualToString:@"doneAdding"]){
         NSString *thePath = [[NSBundle mainBundle]  pathForResource:@"StarshipData" ofType:@"plist"];
         NSArray *tempKeys = [[NSArray alloc]initWithObjects:@"Name",@"Captian", @"From", @"Description", nil];
-        NSArray *tempObjects = [[NSArray alloc]initWithObjects:nameInput.text,captianInput.text, fromInput.text,descriptionInput.text, nil];
+        NSArray *tempObjects = [[NSArray alloc]initWithObjects:nameInput.text,captainInput.text, fromInput.text,descriptionInput.text, nil];
         NSDictionary *newShip = [[NSDictionary alloc]initWithObjects:tempObjects forKeys:tempKeys];
         [_objects insertObject:newShip atIndex:0];
         

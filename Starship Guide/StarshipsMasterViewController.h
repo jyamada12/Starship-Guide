@@ -11,5 +11,5 @@
 @interface StarshipsMasterViewController : UITableViewController
 
 @property NSString *thePath;
-@property NSArray *rawPlistArray; 
+
 @end

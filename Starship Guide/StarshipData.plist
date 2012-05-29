@@ -14,13 +14,38 @@
 	</dict>
 	<dict>
 		<key>Name</key>
-		<string>Millenium Falcon</string>
+		<string>Millennium Falcon</string>
 		<key>Captian</key>
 		<string>Han Solo</string>
 		<key>From</key>
 		<string>Star Wars</string>
 		<key>Description</key>
-		<string>Looks like a pancake</string>
+		<string>The Millennium Falcon is a spacecraft in the fictional Star Wars universe commanded by smuggler Han Solo (Harrison Ford) and his Wookiee first mate, Chewbacca (Peter Mayhew). The highly modified YT-1300 light freighter first appears in Star Wars Episode IV: A New Hope (1977), and subsequently in Star Wars Episode V: The Empire Strikes Back (1980), Star Wars Episode VI: Return of the Jedi (1983) and in a cameo in Star Wars Episode III: Revenge of the Sith (2005). The Falcon also appears in a variety of Star Wars Expanded Universe materials, including books, comics, and games; James Luceno&apos;s novel Millennium Falcon focuses on the titular ship.[2]</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>SSV Normandy SR-1</string>
+		<key>Captian</key>
+		<string>Commander Shepard</string>
+		<key>From</key>
+		<string>Mass Effect</string>
+		<key>Description</key>
+		<string>The SSV Normandy SR-1 (Systems Alliance Space Vehicle Stealth Reconnaissance 1) was a Systems Alliance starship. She is a prototype &quot;deep scout&quot; frigate, first of the eponymous Normandy class, co-developed by the Alliance and the Turian Hierarchy with the sponsorship of the Citadel Council. She is optimized for solo reconnaissance missions deep within unstable regions, using state-of-the-art stealth technology powered by an experimental drive core.
+Commissioned in 2183, the Normandy was initially captained by David Anderson, however, she was handed over to Commander Shepard when the commander became the first human Spectre, serving as Shepard&apos;s main source of transportation and base of operations.
+The Normandy is named after the Battle of Normandy in 1944, a pivotal battle of the Second World War.</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Pillar of Autumn</string>
+		<key>Captian</key>
+		<string>Jacob Keyes</string>
+		<key>From</key>
+		<string>Halo</string>
+		<key>Description</key>
+		<string>The UNSC Pillar of Autumn, (Hull Classification Symbol C-709), was a Halcyon-class light cruiser in the UNSC Navy. It was informally referred to as the Autumn, and its name abbreviated to &quot;PoA&quot;.
+Prior to the Fall of Reach the Pillar of Autumn was selected to support a SPARTAN-II operation to capture Covenant leaders. Captain Jacob Keyes was placed in command. The operation was forestalled by the Covenant assault on Reach; the cruiser was one of the few UNSC survivors and fled the system having lost most of its intended SPARTAN-II passengers.
+
+The cruiser was guided to the Soell system by the AI Cortana. There it was engaged by a Covenant fleet guarding Installation 04. Keyes crash-landed the ship on the installation where the surviving crew continued the battle against the Covenant and, later, the Flood. The ship&apos;s sole remaining combat effective SPARTAN-II, John-117, was forced to detonate the Pillar of Autumn&apos;s fusion reactor, destroying the ship and the installation to prevent the installation from firing.</string>
 	</dict>
 </array>
 </plist>
