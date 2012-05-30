@@ -38,15 +38,22 @@
     // Update the user interface for the detail item.
     NSString *shipName =[self.detailItem objectForKey:@"Name"];
     NSLog(@"shipName:%@",shipName);
-    if ([shipName isEqual:@""]){
+    //Get Picuture
+    NSString *imagePath = [[NSBundle mainBundle] pathForResource:shipName ofType:@"jpg"];
+   /*
+    if ((imagePath.length == 0)){
         shipName = @"default";
         NSLog(@"Setting it to Default");
     }
+    */ 
    
-    //Get Picuture
-    NSString *imagePath = [[NSBundle mainBundle] pathForResource:shipName ofType:@"jpg"];
     NSLog(@"imagePath:%@",imagePath);
     UIImage *tempImage = [[UIImage alloc]initWithContentsOfFile:imagePath];
+    
+    if(tempImage == nil){
+         NSLog(@"Setting it to Default");
+        tempImage = [[UIImage alloc]initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"default" ofType:@"jpg"]];
+    }
     
     //Easter Egg Setup
     if ([shipName isEqual:@"Eagle 5"]) {
