@@ -38,20 +38,38 @@
     // Update the user interface for the detail item.
     NSString *shipName =[self.detailItem objectForKey:@"Name"];
     NSLog(@"shipName:%@",shipName);
+    if ([shipName isEqual:@""]){
+        shipName = @"default";
+        NSLog(@"Setting it to Default");
+    }
+   
+    //Get Picuture
     NSString *imagePath = [[NSBundle mainBundle] pathForResource:shipName ofType:@"jpg"];
     NSLog(@"imagePath:%@",imagePath);
     UIImage *tempImage = [[UIImage alloc]initWithContentsOfFile:imagePath];
-    NSLog(@"Not setting to Default");
+    
+    //Easter Egg Setup
+    if ([shipName isEqual:@"Eagle 5"]) {
+        NSLog(@"Running Easter Egg");
+        self.detailDescription.text = @"It's a Winnebago!";
+        self.captainLabel.text = @"Lone Star";
+        self.nameLabel.text = @"Eagle 5";
+        self.fromLabel.text = @"Spaceballs";
+        self.shipImage.image = tempImage;
+    } else{
+
     
     //Regular Setup
-    if (self.detailItem) {
-        self.detailDescription.text = [self.detailItem objectForKey:@"Description"];
-        self.captainLabel.text = [self.detailItem objectForKey:@"Captian"];
-        self.nameLabel.text = [self.detailItem objectForKey:@"Name"];
-        self.fromLabel.text = [self.detailItem objectForKey:@"From"];
-        self.shipImage.image = tempImage;
+        if (self.detailItem) {
+            NSLog(@"Running Normal Setup");
+            self.detailDescription.text = [self.detailItem objectForKey:@"Description"];
+            self.captainLabel.text = [self.detailItem objectForKey:@"Captian"];
+            self.nameLabel.text = [self.detailItem objectForKey:@"Name"];
+            self.fromLabel.text = [self.detailItem objectForKey:@"From"];
+            self.shipImage.image = tempImage;
+        }
     }
-   
+       
 }
 
 - (void)viewDidLoad

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE37E19B15759C3500370E4A /* Eagle 5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE37E19A15759C3500370E4A /* Eagle 5.jpg */; };
 		CE5FD605156AB48200E7F98A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE5FD604156AB48200E7F98A /* UIKit.framework */; };
 		CE5FD607156AB48200E7F98A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE5FD606156AB48200E7F98A /* Foundation.framework */; };
 		CE5FD609156AB48200E7F98A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE5FD608156AB48200E7F98A /* CoreGraphics.framework */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE37E19A15759C3500370E4A /* Eagle 5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Eagle 5.jpg"; sourceTree = "<group>"; };
 		CE5FD600156AB48100E7F98A /* Starship Guide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Starship Guide.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE5FD604156AB48200E7F98A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		CE5FD606156AB48200E7F98A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -113,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				CEFC18071574D347008A6023 /* default.jpg */,
+				CE37E19A15759C3500370E4A /* Eagle 5.jpg */,
 				CECE71CF1572E58F00BE3500 /* Enterprise.jpg */,
 				CECE71D01572E58F00BE3500 /* Millennium Falcon.jpg */,
 				CECE71D11572E58F00BE3500 /* Pillar of Autumn.jpg */,
@@ -185,6 +188,7 @@
 				CECE71D51572E58F00BE3500 /* Pillar of Autumn.jpg in Resources */,
 				CECE71D61572E58F00BE3500 /* SSV Normandy SR-1.jpg in Resources */,
 				CEFC18081574D347008A6023 /* default.jpg in Resources */,
+				CE37E19B15759C3500370E4A /* Eagle 5.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
